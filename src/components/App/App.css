@@ -21,3 +21,21 @@
 h4 {
   font-style: italic;
 }
+
+.form-container {
+  max-width: 65%;
+  margin: 20px auto;
+  padding: 20px;
+  border: 1px solid gray;
+  border-radius: 5px;
+}
+
+.form-spacing {
+  margin: 20px auto;
+  padding: 20px;
+}
+
+.buttonComponent {
+  float: right;
+  padding: 10px;
+}

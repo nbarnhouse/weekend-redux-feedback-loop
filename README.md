@@ -1,9 +1,12 @@
 # Project Name
 
-[Project Instructions](./INSTRUCTIONS.md), this line may be removed once you have updated the README.md
+Redux Feedback
 
 ## Description
 
-Your project description goes here. What problem did you solve? How did you solve it?
+This application will collect feedback over 4 views. In a separate review page, display the current feedback values and a submit button. and when all steps are complete, the app will save the feedback in the database.
 
-Additional README details can be found [here](https://github.com/PrimeAcademy/readme-template/blob/master/README.md).
+## Built With
+
+NodeJS - npm intall
+SurveyJS - npm install survey-react-ui --save
