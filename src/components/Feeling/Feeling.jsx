@@ -28,12 +28,10 @@ export default function Feeling() {
   return (
     <>
       {/* Visually hidden label for testing */}
-      <div style={{ display: 'none' }} data-testid="hidden-label">
-        feeling
-      </div>
+      <div style={{ display: 'none' }}>/feeling/i</div>
       <div className="form-spacing">
         <h1>How are you feeling today?</h1>
-        <form onSubmit={handleSubmit}>
+        <form onSubmit={handleSubmit} data-testid="next">
           <input
             data-testid="input"
             type="number"

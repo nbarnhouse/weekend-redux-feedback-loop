@@ -1,5 +1,6 @@
 import { useHistory } from 'react-router-dom';
 import { useSelector } from 'react-redux';
+import axios from 'axios';
 
 export default function Review() {
   const reduxStore = useSelector((state) => state);
@@ -8,16 +9,23 @@ export default function Review() {
   //need to add Push Statement to add data to DB
 
   const handleSubmit = (event) => {
-    event.preventDefault;
+    event.preventDefault();
     console.log('Handle submit');
 
-    dispatch({
-      type: 'ELEMENT_LIST_ADD',
-      payload: {
-        name: inputName,
-        region: inputRegion,
+    axios({
+      method: 'POST',
+      url: '/api/feedback',
+      data: {
+        feeling: reduxStore.customerFeeling.feeling,
+        understanding: reduxStore.customerUnderstanding.understanding,
+        support: reduxStore.customerSupport.support,
+        comments: reduxStore.customerComments.comments,
       },
-    });
+    })
+      .then((response) => {})
+      .catch((error) => {
+        console.log('error with element get request', error);
+      });
 
     history.push('/success');
   };
