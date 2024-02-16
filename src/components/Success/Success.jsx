@@ -8,7 +8,7 @@ export default function Success() {
         Thank you for your feedback!
       </h2>
       <div>
-        <Link to="/">
+        <Link to="/feeling">
           <NextButton />
         </Link>
       </div>

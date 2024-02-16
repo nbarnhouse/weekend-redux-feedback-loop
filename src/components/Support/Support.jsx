@@ -1,7 +1,6 @@
 import { useHistory } from 'react-router-dom';
 import { useDispatch } from 'react-redux';
 import { useState } from 'react';
-import NextButton from '../NextButton/NextButton.jsx';
 
 export default function Support() {
   const dispatch = useDispatch();
@@ -38,7 +37,9 @@ export default function Support() {
           value={support}
           onChange={handleInputChange}
         ></input>
-        <NextButton />
+        <button className="buttonComponent" type="submit" data-testid="next">
+          Next
+        </button>
       </form>
     </div>
   );

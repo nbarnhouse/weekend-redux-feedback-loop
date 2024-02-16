@@ -1,7 +1,6 @@
 import { useHistory } from 'react-router-dom';
 import { useDispatch } from 'react-redux';
 import { useState } from 'react';
-import NextButton from '../NextButton/NextButton.jsx';
 
 export default function Feeling() {
   const dispatch = useDispatch();
@@ -27,20 +26,33 @@ export default function Feeling() {
   };
 
   return (
-    <div className="form-spacing">
-      <h1>How are you feeling today?</h1>
-      <form onSubmit={handleSubmit}>
-        <input
-          data-testid="input"
-          required
-          type="number"
-          min="1"
-          max="5"
-          value={feeling}
-          onChange={handleInputChange}
-        ></input>
-        <NextButton />
-      </form>
-    </div>
+    <>
+      {/* Visually hidden label for testing */}
+      <div style={{ display: 'none' }} data-testid="hidden-label">
+        feeling
+      </div>
+      <div className="form-spacing">
+        <h1>How are you feeling today?</h1>
+        <form onSubmit={handleSubmit}>
+          <input
+            data-testid="input"
+            type="number"
+            min="1"
+            max="5"
+            value={feeling}
+            onChange={handleInputChange}
+          ></input>
+          <div>
+            <button
+              className="buttonComponent"
+              type="submit"
+              data-testid="next"
+            >
+              Next
+            </button>
+          </div>
+        </form>
+      </div>
+    </>
   );
 }

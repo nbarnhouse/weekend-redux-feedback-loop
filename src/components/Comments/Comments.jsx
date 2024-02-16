@@ -1,7 +1,6 @@
 import { useHistory } from 'react-router-dom';
 import { useDispatch } from 'react-redux';
 import { useState } from 'react';
-import NextButton from '../NextButton/NextButton.jsx';
 
 export default function Comments() {
   const dispatch = useDispatch();
@@ -32,11 +31,16 @@ export default function Comments() {
       <form onSubmit={handleSubmit}>
         <input
           data-testid="input"
+          style={{ width: '250px', height: '40px' }}
           type="text"
           value={comments}
           onChange={handleInputChange}
         ></input>
-        <NextButton />
+        <div>
+          <button className="buttonComponent" type="submit" data-testid="next">
+            Next
+          </button>
+        </div>
       </form>
     </div>
   );

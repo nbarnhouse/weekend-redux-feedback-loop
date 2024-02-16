@@ -1,7 +1,6 @@
 import { useHistory } from 'react-router-dom';
 import { useDispatch } from 'react-redux';
 import { useState } from 'react';
-import NextButton from '../NextButton/NextButton.jsx';
 
 export default function Understanding() {
   const dispatch = useDispatch();
@@ -15,6 +14,7 @@ export default function Understanding() {
   const handleSubmit = (event) => {
     event.preventDefault();
     // Dispatch an action with the customer information
+
     dispatch({
       type: 'SUBMIT_UNDERSTANDING',
       payload: {
@@ -38,7 +38,9 @@ export default function Understanding() {
           value={understanding}
           onChange={handleInputChange}
         ></input>
-        <NextButton />
+        <button className="buttonComponent" type="submit" data-testid="next">
+          Next
+        </button>
       </form>
     </div>
   );

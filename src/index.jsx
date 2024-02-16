@@ -5,13 +5,13 @@ import './index.css';
 import { store } from './store';
 import App from './components/App/App';
 
-const storeInstance = store()
+const storeInstance = store();
 const root = ReactDOM.createRoot(document.getElementById('root'));
 
 root.render(
-    <React.StrictMode>
-        <Provider store={storeInstance}>
-        <App />
-        </Provider>
-    </React.StrictMode>
+  <React.StrictMode>
+    <Provider store={storeInstance}>
+      <App />
+    </Provider>
+  </React.StrictMode>
 );

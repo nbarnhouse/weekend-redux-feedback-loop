@@ -11,6 +11,14 @@ export default function Review() {
     event.preventDefault;
     console.log('Handle submit');
 
+    dispatch({
+      type: 'ELEMENT_LIST_ADD',
+      payload: {
+        name: inputName,
+        region: inputRegion,
+      },
+    });
+
     history.push('/success');
   };
 

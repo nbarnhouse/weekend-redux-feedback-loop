@@ -39,3 +39,7 @@ h4 {
   float: right;
   padding: 10px;
 }
+
+input {
+  width: 150px;
+}
