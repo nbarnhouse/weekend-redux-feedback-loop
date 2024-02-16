@@ -6,7 +6,7 @@ import Support from '../Support/Support.jsx';
 import Comments from '../Comments/Comments.jsx';
 import Header from '../Header/Header.jsx';
 import Review from '../Review/Review.jsx';
-import Success from '../Success/Success.jsx';
+import Thank from '../Thank/Thank.jsx';
 
 function App() {
   //create reducer and store
@@ -18,7 +18,10 @@ function App() {
         <Header />
 
         <Router>
-          <Route path="/feeling" exact>
+          <Route path="/" exact>
+            <Feeling />
+          </Route>
+          <Route path="/feeling">
             <Feeling />
           </Route>
           <Route path="/understanding">
@@ -33,8 +36,8 @@ function App() {
           <Route path="/review">
             <Review />
           </Route>
-          <Route path="/success">
-            <Success />
+          <Route path="/thank">
+            <Thank />
           </Route>
         </Router>
       </div>

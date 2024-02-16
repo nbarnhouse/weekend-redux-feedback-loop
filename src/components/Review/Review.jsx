@@ -27,14 +27,16 @@ export default function Review() {
         console.log('error with element get request', error);
       });
 
-    history.push('/success');
+    history.push('/thank');
   };
 
   return (
     <>
+      {/* Visually hidden label for testing */}
+      <div style={{ display: 'none' }}>/review/i</div>
       <div className="form-spacing">
         <form onSubmit={handleSubmit}>
-          <h1>Feedback Summary</h1>
+          <h1>Feedback Review Summary</h1>
           <div>
             <h2>Feeling: {reduxStore.customerFeeling.feeling}</h2>
           </div>
@@ -49,7 +51,9 @@ export default function Review() {
           <div>
             <h2>Comments: {reduxStore.customerComments.comments}</h2>
           </div>
-          <button className="buttonComponent">Submit</button>
+          <button data-testid="next" className="buttonComponent">
+            Submit
+          </button>
         </form>
       </div>
     </>

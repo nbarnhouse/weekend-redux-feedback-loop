@@ -31,7 +31,7 @@ export default function Feeling() {
       <div style={{ display: 'none' }}>/feeling/i</div>
       <div className="form-spacing">
         <h1>How are you feeling today?</h1>
-        <form onSubmit={handleSubmit} data-testid="next">
+        <form onSubmit={handleSubmit}>
           <input
             data-testid="input"
             type="number"
@@ -42,9 +42,9 @@ export default function Feeling() {
           ></input>
           <div>
             <button
+              data-testid="next"
               className="buttonComponent"
               type="submit"
-              data-testid="next"
             >
               Next
             </button>
